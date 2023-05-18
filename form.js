@@ -1,26 +1,39 @@
-let currentStep = 0;
-const steps = document.getElementsByClassName("step");
+        // Obtener elementos de la lista de pasos
+        const stepList = document.querySelectorAll('.step-list .step-item');
 
-function showStep(stepIndex) {
-  for (let i = 0; i < steps.length; i++) {
-    steps[i].classList.remove("active");
-  }
-  steps[stepIndex].classList.add("active");
-}
+        // Variables globales
+        let currentStep = 0;
+        const steps = document.getElementsByClassName("step");
 
-function nextStep() {
-  if (currentStep < steps.length - 1) {
-      currentStep++;
-showStep(currentStep);
-}
-}
+        // Función para mostrar un paso específico
+        function showStep(stepIndex) {
+          for (let i = 0; i < steps.length; i++) {
+            steps[i].classList.remove("active");
+          }
+          steps[stepIndex].classList.add("active");
 
-function previousStep() {
-if (currentStep > 0) {
-currentStep--;
-showStep(currentStep);
-}
-}
+          // Activar el elemento correspondiente de la lista de pasos
+          for (let i = 0; i < stepList.length; i++) {
+            stepList[i].classList.remove("active");
+          }
+          stepList[stepIndex].classList.add("active");
+        }
+
+        // Función para cambiar al siguiente paso
+        function nextStep() {
+          if (currentStep < steps.length - 1) {
+            currentStep++;
+            showStep(currentStep);
+          }
+        }
+
+        // Función para cambiar al paso anterior
+        function previousStep() {
+          if (currentStep > 0) {
+            currentStep--;
+            showStep(currentStep);
+          }
+        }
 
 function submitForm() {
 const form = document.getElementById("myForm");

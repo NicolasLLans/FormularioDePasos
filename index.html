@@ -12,20 +12,20 @@
             <div class="banner">
                   <!-- Contenido del banner -->
                   <ul class="step-list">
-                        <li class="active">
-                              <span class="step-circulo">1</span>
+                        <li class="step-item active">
+                              <span class="step-circulo" onclick="changeStep(1)">1</span>
                               <p>Datos personales</p>
                         </li>
-                        <li class="">
-                              <span class="step-circulo">2</span>
+                        <li class="step-item ">
+                              <span class="step-circulo" onclick="changeStep(2)">2</span>
                               <p>Dirección de Envío</p>
                         </li>
-                        <li class="">
-                              <span class="step-circulo">3</span>
+                        <li class="step-item ">
+                              <span class="step-circulo" onclick="changeStep(3)">3</span>
                               <p>Método de Pago</p>
                         </li>
-                        <li class="">
-                              <span class="step-circulo">4</span>
+                        <li class="step-item ">
+                              <span class="step-circulo" onclick="changeStep(4)">4</span>
                               <p>Método de Pago</p>
                         </li>
                         <!-- Agrega más pasos según sea necesario -->
@@ -52,6 +52,17 @@
                               <div class="input-group">
                                     <input type="text" placeholder="Dirección" name="direccion" required>
                                     <input type="text" placeholder="Teléfono" name="telefono" required>
+                              </div>
+                              <div class="buttons">
+                                    <button class="btn-back" onclick="previousStep()">Atrás</button>
+                                    <button onclick="nextStep()">Siguiente</button>
+                              </div>
+                        </div>
+                        <div class="step">
+                              <!-- Contenido del tercer paso -->
+                              <div class="input-group">
+                                    <input type="text" placeholder="Correo electrónico" name="email" required>
+                                    <input type="text" placeholder="Contraseña" name="contrasena" required>
                               </div>
                               <div class="buttons">
                                     <button class="btn-back" onclick="previousStep()">Atrás</button>
