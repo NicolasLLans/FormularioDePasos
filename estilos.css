@@ -37,8 +37,7 @@
     }
 
     #myForm{
-      transition: margin-left 4s ease-in-out 3s;
-
+      width: 80%;
     }
 
     .step-list {
@@ -150,6 +149,10 @@
       font-weight: 700;
     }
 
+    #detalleMetodoPago{
+      margin-top: 15px;
+    }
+
     /* Diseño responsive */
 
     @media (max-width: 900px) {
@@ -180,6 +183,7 @@
                 border-radius: 10px;
                 height: 500px;
                 margin-top: -4rem;
+                width: 100%;
           }
 
           .step-list {
@@ -206,6 +210,10 @@
                 position: absolute;
                 bottom: 0;
                 left: 0;
+          }
+
+          #detalleMetodoPago{
+            margin-top: 5px;
           }
 
           .input-group{
