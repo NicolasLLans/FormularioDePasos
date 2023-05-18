@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <title>Formulario</title>
+      <link rel="stylesheet" href="estilos.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body>
+      <div class="container">
+            <div class="banner">
+                  <!-- Contenido del banner -->
+                  <ul class="step-list">
+                        <li class="active">
+                              <span class="step-circulo">1</span>
+                              <p>Datos personales</p>
+                        </li>
+                        <li class="">
+                              <span class="step-circulo">2</span>
+                              <p>Dirección de Envío</p>
+                        </li>
+                        <li class="">
+                              <span class="step-circulo">3</span>
+                              <p>Método de Pago</p>
+                        </li>
+                        <li class="">
+                              <span class="step-circulo">4</span>
+                              <p>Método de Pago</p>
+                        </li>
+                        <!-- Agrega más pasos según sea necesario -->
+                  </ul>
+            </div>
+            <div class="content">
+                  <form id="myForm" onsubmit="event.preventDefault(); submitForm()">
+                        <div class="step active">
+                              <!-- Contenido del primer paso -->
+                              <div class="input-group">
+                                    <h4>Datos personales</h4>
+                                    <label>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, voluptatibus!</label>
+                                    <label for="Nombre">Nombre</label>
+                                    <input type="text" placeholder="Nombre" name="nombre" required>
+                                    <label for="apellido">Apellido</label>
+                                    <input type="text" placeholder="Apellido" name="apellido" required>
+                              </div>
+                              <div class="buttons">
+                                    <button onclick="nextStep()">Siguiente</button>
+                              </div>
+                        </div>
+                        <div class="step">
+                              <!-- Contenido del segundo paso -->
+                              <div class="input-group">
+                                    <input type="text" placeholder="Dirección" name="direccion" required>
+                                    <input type="text" placeholder="Teléfono" name="telefono" required>
+                              </div>
+                              <div class="buttons">
+                                    <button class="btn-back" onclick="previousStep()">Atrás</button>
+                                    <button onclick="nextStep()">Siguiente</button>
+                              </div>
+                        </div>
+                        <div class="step">
+                              <!-- Contenido del tercer paso -->
+                              <div class="input-group">
+                                    <input type="text" placeholder="Correo electrónico" name="email" required>
+                                    <input type="text" placeholder="Contraseña" name="contrasena" required>
+                              </div>
+                              <div class="buttons">
+                                    <button class="btn-back" onclick="previousStep()">Atrás</button>
+                                    <button type="submit">Enviar</button>
+                              </div>
+                        </div>
+                  </form>
+                  <script src="form.js">
+                  </script>
+            </div>
+      </div>
+</body>
+
+</html>

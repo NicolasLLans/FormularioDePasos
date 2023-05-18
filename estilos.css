@@ -1,0 +1,210 @@
+    * {
+          box-sizing: border-box;
+    }
+
+    body {
+          margin: 0;
+          padding: 0;
+          font-family: Arial, sans-serif;
+          display: flex;
+          justify-content: center;
+          align-content: center;
+          flex-wrap: wrap;
+          background: #e5efff;
+    }
+
+    .container {
+          display: grid;
+          grid-template-columns: 35% 65%;
+          height: 600px;
+          margin: 20px;
+          background: rgb(255, 255, 255);
+          border-radius: 20px;
+          width: 900px;
+    }
+
+    .banner {
+          background-image: url('https://img.freepik.com/vector-gratis/fondo-formas-abstractas-planas-dibujadas-mano_23-2149083559.jpg');
+          background-size: cover;
+          background-position: center;
+          border-radius: 10px;
+          margin: 15px;
+          display: flex;
+          justify-content: center;
+          align-content: center;
+          flex-wrap: wrap;
+
+    }
+
+    #myForm{
+      transition: margin-left 4s ease-in-out 3s;
+
+    }
+
+    .step-list {
+          display: grid;
+          grid-gap: 25px;
+          list-style-type: none;
+          padding: 30px 0;
+          text-align: center;
+          color: white;
+          font-weight: bold;
+    }
+
+    .step-list li {
+          margin-bottom: 10px;
+          opacity: 0.5;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 15px;
+    }
+
+    .step-list li.active {
+          opacity: 1;
+    }
+
+    .step-circulo {
+          border: 2px solid #fff;
+          border-radius: 25px;
+          width: 40px;
+          height: 40px;
+          display: grid;
+          text-align: center;
+          align-content: center;
+    }
+
+
+
+
+    .content {
+          color: rgb(16, 16, 43);
+          border-radius: 0px 10px 10px 0px;
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+    }
+
+    /* Resto del código CSS */
+
+    /* Estilos adicionales para los pasos y botones */
+
+    .step {
+          display: none;
+    }
+
+    .step.active {
+          display: block;
+    }
+
+    .buttons {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 20px;
+    }
+
+    input[type="text"] {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+    }
+
+    button {
+          padding: 15px 30px;
+          background-color: #133972;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+    }
+
+    button:hover {
+          background-color: #0740a8;
+    }
+
+    button:disabled {
+          background-color: #ccc;
+          cursor: not-allowed;
+    }
+
+    .btn-back{
+      background: none;
+      color: rgb(77, 77, 77);
+      font-weight: 700;
+    }
+
+    .btn-back:hover{
+      background: none;
+      color: rgb(143, 140, 140);
+      font-weight: 700;
+    }
+
+    /* Diseño responsive */
+
+    @media (max-width: 900px) {
+          .container {
+                grid-template-columns: 100%;
+                grid-template-rows: 30% 70%;
+                grid-gap: 0;
+                margin: 0;
+                background-color: transparent;
+          }
+
+          .banner {
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+                margin: 0;
+          }
+
+          .content {
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                padding: 10px;
+                background-color: transparent;
+          }
+
+          #myForm {
+                border-radius: 10px;
+                height: 500px;
+                margin-top: -4rem;
+          }
+
+          .step-list {
+                grid-template-columns: repeat(4, 1fr);
+                width: 65%;
+                grid-gap: 0;
+          }
+
+          .step-list li {
+                justify-content: center;
+          }
+
+          p {
+                display: none;
+          }
+
+          .buttons {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 20px;
+                background: white;
+                padding: 15px;
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+          }
+
+          .input-group{
+            background: white;
+            height: fit-content;
+            padding: 30px 20px;
+            border-radius: 10px;
+          }
+    }
