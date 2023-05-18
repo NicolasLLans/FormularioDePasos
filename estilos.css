@@ -5,7 +5,7 @@
     body {
           margin: 0;
           padding: 0;
-          font-family: Arial, sans-serif;
+          font-family: 'Roboto', sans-serif;
           display: flex;
           justify-content: center;
           align-content: center;
@@ -192,7 +192,7 @@
                 justify-content: center;
           }
 
-          p {
+          .step-list-texto {
                 display: none;
           }
 

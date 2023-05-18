@@ -42,3 +42,19 @@ const formValues = Object.fromEntries(formData.entries());
 console.log(formValues);
 // Aquí puedes hacer lo que desees con los datos del formulario, como enviarlos al servidor
 }
+
+function showPaymentDetails() {
+      const metodoPago = document.getElementById("metodoPago");
+      const detalleMetodoPago = document.getElementById("detalleMetodoPago");
+      
+      if (metodoPago.value === "tarjeta") {
+        detalleMetodoPago.style.display = "block";
+      } else {
+        detalleMetodoPago.style.display = "none";
+      }
+    }
+    
+    // Agrega un evento al cambio de selección del método de pago
+    const metodoPagoSelect = document.getElementById("metodoPago");
+    metodoPagoSelect.addEventListener("change", showPaymentDetails);
+    
