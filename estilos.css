@@ -237,7 +237,7 @@
           .input-group{
             background: white;
             height: fit-content;
-            padding: 4px 20px;
+            padding: 10px 20px;
             border-radius: 10px;
           }
 
@@ -246,8 +246,6 @@
           }
 
           .input-group p{
-            margin-bottom: 8px;
-            margin-top: 8px;
             color: hsl(231, 11%, 63%);
           }
 
